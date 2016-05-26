@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  birthday: 2016-05-04
+  isActive: false
+  description: MyText
+
+two:
+  name: MyString
+  birthday: 2016-05-04
+  isActive: false
+  description: MyText

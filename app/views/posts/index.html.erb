@@ -1,0 +1,35 @@
+<div class="container">
+  <br>
+  <%= link_to "Nuevo Articulo", new_post_path %>
+    <hr>
+  <%= form_tag('/filter', method: :get) do -%>
+      <%= search_field_tag 'search', nil, placeholder: 'Buscar'%>
+      <div><%= submit_tag 'Buscar content' %></div>
+  <% end -%>
+  <br>
+  <table class="table table-sm">
+    <thead>
+    <tr>
+      <th class="warning">ID</th>
+      <th class="warning">Title</th>
+      <th class="warning">Content</th>
+      <th class="warning">date</th>
+      <th class="warning">Ver</th>
+      <th class="warning">Editar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @todosPost.each do |post| %>
+    <tr>
+      <th scope="row"><%= post.id %></th>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td><%= post.reviewDate %></td>
+      <td><%= link_to "Ver",post_path(post) %></td>
+      <td><%= link_to "Editar",edit_post_path(post) %></td>
+
+    </tr>
+     <% end %>
+    </tbody>
+  </table>
+</div>
